@@ -1,0 +1,21 @@
+Package: parsetidy
+Type: Package
+Title: Tidy an R parse tree into a data frame
+Version: 0.1
+Date: 2015-09-16
+Maintainer: David Robinson <drobinson@stackoverflow.com>
+Description: Tidy an R parse tree into a data frame. This allows
+  code to be parsed and processed with dplyr and similar tools.
+License: MIT + file LICENSE
+LazyData: TRUE
+Authors@R: person("David", "Robinson", email = "admiral.david@gmail.com", role = c("aut", "cre"))
+URL: http://github.com/dgrtwo/parsetidy
+VignetteBuilder: knitr
+BugReports: http://github.com/dgrtwo/parsetidy/issues
+Imports: plyr,
+    dplyr,
+    lazyeval,
+    pryr,
+    stringr
+Suggests: knitr,
+    ggplot2

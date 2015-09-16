@@ -1,0 +1,35 @@
+---
+title: "Introduction to parsetidy"
+author: "David Robinson"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to parsetidy}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+library(parsetidy)
+
+library(dplyr)
+library(ggplot2)
+x <- 1
+y <- 3:8
+
+code <- "
+z <- x + y + other
+d <- z + 2
+
+print(d + 3)
+
+ggplot(mtcars, aes(wt, mpg)) + geom_point()
+
+mtcars %>%
+  mutate(wt = wt + 1) %>%
+  group_by(cyl, am) %>%
+  summarise(mean(am))
+"
+
+cat(reprex_prefix(code), sep = "\n")
+```
